@@ -685,3 +685,190 @@ body {
 }
 
 
+/* -------------------------------------- */
+/* RESPONSIVE DESIGN */
+/* -------------------------------------- */
+
+@media (max-width: 1200px) {
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .juega-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .juega-container2 {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .juega-imagenes {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .juega-video {
+    margin-left: 0;
+  }
+}
+
+/**********************************************************************************/
+/**********************************************************************************/
+
+@media (max-width: 992px) {
+  .news-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .explore-text p {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .news-section h2 {
+    margin-left: 5rem;
+    text-align: center;
+  }
+
+  .explore-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .role img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .juega-imagenes {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .juega-video video {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/**********************************************************************************/
+/**********************************************************************************/
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .news-section {
+    height: auto;
+  }
+
+  .explore-section {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .explore-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .explore-text p {
+    font-size: 0.95rem;
+  }
+
+  .explore-roles {
+    justify-content: center;
+  }
+
+  .juega-section {
+    padding: 3rem 1rem;
+  }
+
+  .juega-imagenes {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .juega-video video {
+    width: 250px;
+    height: 250px;
+  }
+
+  .jugar-section-final {
+    height: 80vh;
+  }
+
+  .footer-links,
+  .footer-bottom-links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .footer-social {
+    flex-direction: row;
+  }
+}
+
+/**********************************************************************************/
+/**********************************************************************************/
+
+@media (max-width: 576px) {
+  .hero {
+    height: calc(100vh - 60px);
+    margin-top: 60px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .news-section h2 {
+    margin-left: 0;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .news-card {
+    width: 90%;
+  }
+
+  .explore-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .explore-text p {
+    margin-left: 0;
+  }
+
+  .btn-gold, .btn-blue {
+    width: 80%;
+    text-align: center;
+  }
+
+  .role img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .circle-border img {
+    width: 220px;
+  }
+
+  .juega-video video {
+    width: 200px;
+    height: 200px;
+  }
+
+  .footer-logo img {
+    max-width: 90px;
+  }
+}

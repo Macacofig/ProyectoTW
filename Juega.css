@@ -1,48 +1,47 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     font-family: Arial, sans-serif;
     background-image: url(imgs/juega/fondo.webp);
-    background-size: cover ;
+    background-size: cover;
 }
 
 /*********************************************************************/
 /*********************************************************************/
 
-.Container{
+.Container {
     height: 80vh;
     width: 100vw;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.Container .Textos
-{
+.Container .Textos {
     width: 60%;
     height: 100%;
     display: flex;
     flex-direction: column;
-
     margin-top: 5%;
     margin-left: 5%;
 }
 
-.Container .Textos .arriba 
-{
+.Container .Textos .arriba {
     width: 100%;
     height: 50%;
     display: flex;
     align-items: flex-start;
-} 
-.Container .Textos .arriba img
-{
+}
+
+.Container .Textos .arriba img {
     width: 150px;
     height: 100px;
-} 
+}
 
-.Container .Textos .abajo
-{
+.Container .Textos .abajo {
     width: 100%;
     height: 50%;
     display: flex;
@@ -50,14 +49,12 @@ body{
     justify-content: center;
 }
 
-.Container .Textos .abajo h2
-{
+.Container .Textos .abajo h2 {
     color: #fff;
     font-size: 3rem;
 }
 
-.Container .Formulario
-{
+.Container .Formulario {
     width: 40%;
     height: 100%;
     display: flex;
@@ -65,8 +62,7 @@ body{
     justify-content: center;
 }
 
-.Container .Formulario .FormularioContainer
-{
+.Container .Formulario .FormularioContainer {
     width: 80%;
     height: 80%;
     margin-top: 10%;
@@ -75,8 +71,8 @@ body{
     flex-direction: column;
     padding: 20px;
 }
-.Container .Formulario .FormularioContainer .textos
-{
+
+.Container .Formulario .FormularioContainer .textos {
     width: 100%;
     height: 50%;
     display: flex;
@@ -85,54 +81,48 @@ body{
     justify-content: center;
 }
 
-.Container .Formulario .FormularioContainer .textos h3
-{
+.Container .Formulario .FormularioContainer .textos h3 {
     margin-top: 5%;
     color: darkgrey;
 }
 
-.Container .Formulario .FormularioContainer .textos input
-{
+.Container .Formulario .FormularioContainer .textos .input1 {
     margin-top: 5%;
     font-size: 2rem;
+    width: 80%;
 }
 
-.Container .Formulario .FormularioContainer .textos p
-{
-    margin-top: 5%;  
-    font-weight: bold; 
+.Container .Formulario .FormularioContainer .textos p {
+    margin-top: 5%;
+    font-weight: bold;
 }
 
-.Container .Formulario .FormularioContainer .imgs
-{
+.Container .Formulario .FormularioContainer .imgs {
     width: 100%;
     height: 50%;
     display: flex;
     flex-direction: column;
 }
-.Container .Formulario .FormularioContainer .imgs .imgSelec
-{
+
+.Container .Formulario .FormularioContainer .imgs .imgSelec {
     display: flex;
     width: 100%;
     height: 50%;
     flex-direction: row;
     justify-content: center;
     margin-top: 5%;
-    /*quiero espacio entre imagen*/
     gap: 30px;
-    
 }
 
-.Container .Formulario .FormularioContainer .imgs .imgSelec img
-{
+.Container .Formulario .FormularioContainer .imgs .imgSelec img {
     width: 50px;
     height: 50px;
     border: black solid 2px;
     border-radius: 50%;
     cursor: pointer;
 }
-.Container .Formulario .FormularioContainer .imgs .Sig
-{
+
+.Container .Formulario .FormularioContainer .imgs .Sig {
     display: flex;
     width: 100%;
     height: 50%;
@@ -142,11 +132,124 @@ body{
     gap: 30px;
 }
 
-.Container .Formulario .FormularioContainer .imgs .Sig img
-{
+.Container .Formulario .FormularioContainer .imgs .Sig img {
     width: 100px;
     height: 100px;
     border: black solid 2px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 1024px) {
+    .Container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .Container .Textos {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .Container .Textos .abajo h2 {
+        font-size: 2.5rem;
+    }
+
+    .Container .Formulario {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .Container .Formulario .FormularioContainer {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .Container .Formulario .FormularioContainer .textos input {
+        font-size: 1.5rem;
+    }
+
+    .Container .Formulario .FormularioContainer .imgs .imgSelec {
+        gap: 20px;
+    }
+
+    .Container .Formulario .FormularioContainer .imgs .Sig {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .Container .Textos {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .Container .Textos .abajo h2 {
+        font-size: 2rem;
+    }
+
+    .Container .Formulario {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .Container .Formulario .FormularioContainer {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .Container .Formulario .FormularioContainer .textos input {
+        font-size: 1.3rem;
+    }
+
+    .Container .Formulario .FormularioContainer .imgs .imgSelec {
+        gap: 15px;
+    }
+
+    .Container .Formulario .FormularioContainer .imgs .Sig {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .Container .Textos {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .Container .Textos .arriba img {
+        width: 120px;
+        height: 80px;
+    }
+
+    .Container .Textos .abajo h2 {
+        font-size: 1.5rem;
+    }
+
+    .Container .Formulario .FormularioContainer .textos input {
+        font-size: 1.2rem;
+    }
+
+    .Container .Formulario .FormularioContainer .imgs .imgSelec {
+        gap: 10px;
+    }
+
+    .Container .Formulario .FormularioContainer .imgs .Sig {
+        gap: 10px;
+    }
 }

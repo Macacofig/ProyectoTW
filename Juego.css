@@ -762,3 +762,168 @@
     margin: 0 auto 1rem;
     color: #aaa;
   }
+
+  /************************************************************************************/
+/************************************************************************************/
+
+/* RESUMEN */
+@media (max-width: 1000px) {
+  .resumen .resumen-container .resumen-elements {
+    margin-left: 2rem;
+    width: 80%;
+  }
+
+  .resumen .resumen-container .resumen-elements h1 {
+    font-size: 2.5rem;
+  }
+
+  .resumen .resumen-container .resumen-elements h2 {
+    font-size: 1.5rem;
+  }
+
+  .resumen .resumen-container .resumen-elements a {
+    font-size: 1.5rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/************************************************************************************/
+/************************************************************************************/
+
+/* BIENVENIDA */
+@media (max-width: 1000px) {
+  .bienvenida p {
+    font-size: 1.5rem;
+  }
+
+  .bienvenida h1 {
+    font-size: 3rem;
+  }
+}
+
+/************************************************************************************/
+/************************************************************************************/
+
+/* INFO GENERAL */
+@media (max-width: 1000px) {
+  .infogen .info-container {
+    padding: 1rem;
+  }
+
+  .info-container h2 {
+    font-size: 2rem;
+  }
+
+  .info-container p {
+    font-size: 1rem;
+  }
+}
+
+/************************************************************************************/
+/************************************************************************************/
+
+/* JUGABILIDAD */
+@media (max-width: 1000px) {
+  .jugabilidad {
+    flex-direction: column;
+  }
+
+  .Base,
+  .Ejercito,
+  .Campamentos,
+  .Mapas,
+  .Campeones{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-des {
+    flex-direction: row;
+  }
+
+  .img-des .im{
+    width: 50%;
+  }
+
+  .img-des .im img{
+  width: 100px;
+  height: 100px;
+  }
+}
+
+/************************************************************************************/
+/************************************************************************************/
+
+/* Descripción */
+@media (max-width: 1000px) {
+  .Descripcion {
+    padding: 1rem;
+  }
+
+  .texto-des h2 {
+    font-size: 2rem;
+  }
+
+  .texto-des p {
+    font-size: 1rem;
+  }
+
+  .img-des {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-des .im {
+    width: 100%;
+  }
+
+  .img-des img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/************************************************************************************/
+/************************************************************************************/
+
+/* CAMPEONES */
+
+@media (max-width: 1000px) {
+  
+  .Campeones {
+    flex-direction: row;
+    height: auto;
+  }
+
+  .Campeones .Seleccion {
+    width: 100%;
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .Campeones .Champ .ImagenChamp img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+/************************************************************************************/
+/************************************************************************************/
+/* FOOTER */
+@media (max-width: 1000px) {
+  .footer-links,
+  .footer-bottom-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links a,
+  .footer-bottom-links a {
+    font-size: 1.2rem;
+  }
+}
+
+  
