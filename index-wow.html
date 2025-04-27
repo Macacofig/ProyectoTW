@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Warcraft 3</title>
+  <link rel="stylesheet" href="WowIndex.css" />
+</head>
+<body>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+    
+    <header class="navbar">
+        <div class="logo-container">
+            <img class="logo-img" src="imgs/logo-Blizzard.png" alt="logo Blizzard">            
+            <a href="index-wow.html">
+                <img class="logo-img" src="imgs/logo-wow.png" alt="logo WoW">
+            </a>
+        </div>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <nav class="nav-links">
+            <a href="Juego.html">Juego</a>
+            <a href="Razas.html">Razas</a>
+            <a href="OtrosJuegos.html">Otros De Nuestros Juegos </a>
+            <a href="Juega.html" class="jugar-ahora">Jugar Ahora</a>
+        </nav>
+        <!-- Íconos a la derecha -->
+        <div class="nav-actions">
+            <div class="nav-icon search-container">
+            <span class="icon">&#128269;</span>
+            <input type="text" class="search-input" placeholder="Buscar..." />
+            </div>
+
+            <div class="nav-icon lang-container">
+            <span class="icon">&#127760;</span>
+            <select class="lang-select">
+                <option value="es">ES</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+            </select>
+            </div>
+        </div>
+    </header>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+
+     <!--HERO SECTION-->
+    <section class="hero">
+        <div class="hero-content">
+            <video autoplay muted loop class="background-video">
+                <source src="imgs/World of Warcraft  - Tráiler cinemático.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+            <h1>Warcraft 3</h1>
+            <a href="Juega.html" class="cta-button">Jugar Ahora</a>
+        </div>
+    </section>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <!--NEWS SECTION-->
+    <section class="news-section">
+        <h2>JUEGOS ESTRATÉGICOS</h2>
+        <div class="news-cards">
+            <article class="news-card">
+                <img src="imgs/ReingOfChaos.jpg" alt="Inicio" />
+                <div class="news-content">
+                    <h4>3 de julio de 2002</h4>
+                    <h3>Forma tu ejercito y destruye a las demás razas</h3>
+                    <p>Descubre la fuerza de los orcos, el poder de los humanos, la astucia de los elfos y mucho más...</p>
+                </div>
+            </article>
+        
+            <article class="news-card">
+                <img src="imgs/FrozenThrone.jpeg" alt="Expansion" />
+                <div class="news-content">
+                    <h4>1 de julio de 2003</h4>
+                    <h3>El invierno llega al mundo de World of Warcraft</h3>
+                    <p>De ser un rey, a corromperse por el mal por querer salvar su pueblo...</p>
+                </div>
+            </article>
+        
+            <article class="news-card">
+                <img src="imgs/Reforged.jpg" alt="Actualización de diseño" />
+                <div class="news-content">
+                    <h4>28 de enero de 2020</h4>
+                    <h3>Nuevas animaciones y visión</h3>
+                    <p>Revive tus juegos en World of Warcraft con un nuevo diseño</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <!--EXPLORE SECTION-->
+    <section class="explore-section">
+        <div class="explore-container">
+            <div class="explore-text">
+                <h3>ELIGE A TU</h3>
+                <h2>RAZA</h2>
+                <p>
+                    Crea tu base, entrena a tus tropas y conquista el campo de batalla.
+                </p>
+                <div class="explore-buttons">
+                    <a href="Razas.html" class="btn-gold">DESCUBRIR RAZAS</a>
+                    <a href="Juega.html" class="btn-blue">JUGAR AHORA</a>
+                </div>
+                <div class="explore-roles">
+                    <div class="role"><img src="imgs/escudos/Orcos.webp"><span>ORCOS</span></div>
+                    <div class="role"><img src="imgs/escudos/Humanos.jpg"><span>HUMANOS</span></div>
+                    <div class="role"><img src="imgs/escudos/ElfosNocturnos.webp"><span>ELFOS NOCTURNOS</span></div>
+                    <div class="role"><img src="imgs/escudos/MuertosVivientes.webp"><span>MUERTOS VIVIENTES</span></div>
+                </div>
+            </div>
+            <div class="explore-character">
+                <!-- TIene que cambiar a medida que se hace click en las imagenes -->
+                <div class="circle-border">
+                    <img src="imgs/heroe/Uther.png" alt="Campeón destacado">
+                </div>
+                <h3 class="character-name">Humanos</h3>
+                <p class="character-role">La luz es nuestra fuerza</p>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <!-- JUEGA SECTION -->
+    <!-- Cambia de acuerdo a la seleccion de la anterior section -->
+    <section class="juega-section">
+        <div class="juega-container">
+          <div class="juega-texto">
+            <div class="juega-encabezado"> 
+              <h2>CONOCE A TUS HEROES</h2>
+              <a href="#" class="btn-gold">JUGAR AHORA</a>
+            </div>  
+            <br>
+            <br>
+            <div class="juega-container2">
+                <div class="juega-imagenes">
+                  <div class="modo">
+                    <img src="imgs/icons/muradinIcon.webp" alt="Muradin">
+                    <p>Muradin</p>
+                  </div>
+                  <div class="modo">
+                    <img src="imgs/icons/utherIcon.webp" alt="Uther">
+                    <p>Uther</p>
+                  </div>
+                  <div class="modo">
+                    <img src="imgs/icons/archimagoIcon.png" alt="Archimago">
+                    <p>Archimago</p>
+                  </div>
+                  <div class="modo">
+                    <img src="imgs/icons/kelthalasIcon.png" alt="Kelthalas">
+                    <p>Keltalas</p>
+                  </div>  
+                </div>
+                <div class="juega-video">
+                  <video src="imgs/champs/ArchimagoVideo.mp4" autoplay muted loop></video>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <section class="jugar-section-final">
+        <video autoplay muted loop playsinline class="video-fondo">
+          <source src="imgs/WorldOfWarcraft2.mp4" type="video/mp4" />
+          Tu navegador no soporta el video.
+        </video>
+        <div class="overlay">
+          <a href="Juega.html" class ="btn-gold" >JUGAR GRATIS</a>
+        </div>
+    </section>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-links">
+          <a href="#">ACERCA DE WARCRAFT 3</a>
+          <a href="#">AYÚDANOS A MEJORAR</a>
+          <a href="#">ASISTENCIA</a>
+        </div>
+      
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-reddit-alien"></i></a>
+          <a href="#"><i class="fas fa-comments"></i></a>
+        </div>
+      
+        <div class="footer-logo">
+          <img src="imgs/LogoPequeño.png" alt="LogoPequeño" />
+          <p>©2025 Blizzard Entertainment, Inc.
+            Todas las marcas comerciales a las que se hace referencia son propiedad de sus respectivos dueños.</p>
+        </div>
+      
+        <div class="footer-bottom-links">
+          <a href="#">AVISO DE PRIVACIDAD</a>
+          <a href="#">TÉRMINOS DE USO</a>
+          <a href="#">POLÍTICA DE COOKIES</a>
+          <a href="#">INFORMACIÓN DE LA EMPRESA</a>
+        </div>
+      
+    </footer>
+</body>
+</html>

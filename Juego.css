@@ -1,0 +1,764 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+  }
+  
+  body {
+    color: #fff;
+  }
+  
+  /************************************************************************************/
+  /************************************************************************************/
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    z-index: 9999; 
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: rgb(15, 15, 30);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Navbar P1*/
+  .navbar .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .logo-container .logo-img {
+    width: 150px;
+    height: 70px;
+    margin-right: 10px;
+    margin-left: 0px;
+  }
+  
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  /* Navbar P2*/
+  
+  .nav-links a {
+    margin-left: 3rem;
+    text-decoration: none;
+    color: #ddd;
+    font-weight: bold;
+  
+  }
+  
+  .nav-links .jugar-ahora {
+    margin-left: 3rem;
+    color: #000;
+    font-weight: bold;
+    background-color: #ffd700;
+    padding: 10px 10px;
+    border-radius: 10%;
+  }
+  
+  .nav-links a:hover {
+    color: #ffd700;
+  }
+  
+  .nav-links .jugar-ahora:hover {
+    color: #fff;
+  }
+  
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  /* Ocultamos el input de checkbox */
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* Estilo del ícono hamburguesa */
+  .menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ddd;
+    margin-left: auto;
+  }
+  
+  /* Responsive: activamos el menú hamburguesa */
+  @media (max-width: 1100px) {
+    .menu-icon {
+      display: flex;
+      align-items: flex-end;
+      z-index: 1001;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      background-color: rgb(15, 15, 30);
+      z-index: 1000;
+    }
+  
+    .menu-toggle:checked + .menu-icon + .nav-links {
+      max-height: 500px;
+    }
+  
+    .nav-links a {
+      margin: 1rem 0;
+      padding: 1rem;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  
+    /* nav-actions se mantiene visible y horizontal */
+    .nav-actions {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 0;
+    }
+  } 
+  
+  /* Íconos base */
+  .nav-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 1rem;
+    color: #ddd;
+    cursor: pointer;
+  }
+  
+  .nav-icon .icon {
+    font-size: 1.5rem;
+  }
+  
+  /* Input de búsqueda oculto por defecto */
+  .search-input {
+    width: 0;
+    opacity: 0;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: #222;
+    color: white;
+  }
+  
+  /* Al pasar el mouse sobre el contenedor, expandir */
+  .search-container:hover .search-input {
+    width: 150px;
+    opacity: 1;
+  }
+  
+  /* Select de idioma oculto por defecto */
+  .lang-select {
+    width: 0;
+    opacity: 0;
+    padding: 0.4rem;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    transition: all 0.3s ease;
+    appearance: none;
+  }
+  
+  /* Al pasar el mouse sobre el contenedor, expandir */
+  .lang-container:hover .lang-select {
+    width: 80px;
+    opacity: 1;
+  }
+  
+  /* Responsive fix para que no se rompa el menú */
+  @media (max-width: 768px) {
+    .nav-icon {
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .search-input,
+    .lang-select {
+      width: 100% !important;
+      margin-left: 0;
+      margin-top: 0.5rem;
+    }
+  }
+
+  /************************************************************************************/
+  /************************************************************************************/
+
+  /* RESUMEN */
+  .resumen
+  {
+    background-image: url(imgs/juego/FondoResumen.jpg);
+    background-size: cover;
+    /*quiero se vea pueda ver toda la imagen*/
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  .resumen .resumen-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .resumen .resumen-container .resumen-elements
+  {
+    margin-left: 5rem;
+    width: 35%;
+    margin-top: 1rem;
+  }
+
+  .resumen .resumen-container .resumen-elements h1
+  {
+    font-size: 4rem;
+    color: #d8c479;
+    padding-bottom: 2rem;
+  }
+  .resumen .resumen-container .resumen-elements h2
+  {
+    font-size: 2rem;
+    color: #ffffff;
+    padding-bottom: 2rem;
+  }
+  .resumen .resumen-container .resumen-elements a
+  {
+    font-size: 2rem;
+    color: #ffffff;
+    background-color: #d8c479;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  /************************************************************************************/
+  /************************************************************************************/
+
+  /* BIENVENIDA */
+  .bienvenida
+  {
+    height: 100vh;
+    width: 100vw;
+    /*el texto tiene que estar en el centro*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .bienvenida p
+  {
+    font-size: 2rem;
+    color: #000000;
+    padding-bottom: 2rem;
+  }
+  .bienvenida h1
+  {
+    font-size: 4rem;
+    color: #000000;
+    padding-bottom: 2rem;
+  }
+
+  /************************************************************************************/
+  /************************************************************************************/
+
+  /* INFO GENERAL */
+  .infogen {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  /* Sección de imagen */
+  .infogen .img img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Sección de información con video de fondo */
+  .infogen .info {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Video de fondo */
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Fondo detrás del contenido */
+  }
+  
+  /* Contenedor de texto encima del video */
+  .info-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece un poco para que el texto sea legible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .info-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .info-container p {
+    max-width: 800px;
+    line-height: 1.6;
+    font-size: 1.2rem;
+  }
+
+  /************************************************************************************/
+  /************************************************************************************/
+
+  /* JUGABILIDAD */
+  .jugabilidad {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Cada sección ocupa el 100% de la pantalla */
+  .Base,
+  .Ejercito,
+  .Campamentos,
+  .Mapas,
+  .Recursos
+  {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+  }
+  
+  /************************************************************************************/
+  /************************************************************************************/
+  
+  .Descripcion {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #0a0e23; /* Estilo oscuro tipo LoL */
+    color: white;
+  }
+  
+  .texto-des {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .texto-des h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .texto-des p {
+    font-size: 1.2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  
+  /* Iconos de razas */
+  .img-des {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .img-des .im {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+  
+  .img-des img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+  .img-des img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Columna derecha: imagen de base */
+  .img {
+    flex: 1;
+    position: relative;
+    background-color: #0a0e23;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imagen-img {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imagen-img img {
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+  }
+  
+  .texto-img {
+    flex: 1;
+    text-align: center;
+    color: white;
+    padding: 0.5rem;
+  }
+  
+  .texto-img h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .texto-img p {
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.4;
+  }
+  
+  /************************************************************************************/
+  /************************************************************************************/
+
+  /* RECURSOS */
+
+  .Recursos .Descripcion {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  /* Titulo y subtitulo */
+  .TituloRec h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  
+  .TituloRec p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+    color: #ccc;
+  }
+  
+  /* Video de fondo */
+  .VideoRec {
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+    margin: 2rem 0;
+  }
+  
+  .VideoRec video  {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+  }
+  
+  /* Iconos de recursos */
+  .ImgsRec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ImgsRec img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: brightness(1.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .ImgsRec img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Texto explicativo */
+  .TextRec p:first-child {
+    font-weight: bold; /*negrilla*/
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .TextRec p:last-child {
+    font-size: 1rem;
+    max-width: 800px;
+    line-height: 1.5;
+    color: #ccc;
+  }
+  
+
+  /************************************************************************************/
+  /************************************************************************************/
+
+  /* CAMPEONES */
+
+.Campeones {
+  background-image: url(imgs/juego/orcos/Splashart.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+.Campeones .Seleccion
+{
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.Campeones .Seleccion .ImagenesSelec
+{
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5%;
+}
+.Campeones .Seleccion .TextoSelec
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.Campeones .Seleccion .TextoSelec h2
+{
+  font-size: 2.5rem;
+  color: #fff;
+}
+.Campeones .Seleccion .TextoSelec a
+{
+  font-size: 2rem;
+  color: #000;
+  background-color: #d8c479;
+  padding: 1rem;
+  text-decoration: none; 
+}
+.Campeones .Seleccion .ImagenesSelec img
+{
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+.Campeones .Seleccion .ImagenesSelec img:hover
+{
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.Campeones .Champ
+{
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Campeones .Champ .TextoChamp
+{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Campeones .Champ .TextoChamp h3
+{
+  font-size: 2rem;
+  color: #fff;
+  padding-top: 1rem;
+}
+.Campeones .Champ .TextoChamp h5
+{
+  font-size: 1rem;
+  color: #bfb9b9;
+  padding-top: 1rem;
+}
+.Campeones .Champ .ImagenChamp
+{
+  display: flex;
+  justify-content: center;
+}
+
+.Campeones .Champ .ImagenChamp img
+{
+  border-radius: 100%;
+}
+  /************************************************************************************/
+  /************************************************************************************/
+
+  /* JUEGA */
+
+  .Jugar
+  {
+    background-image: url(imgs/juego/FondoJugar.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .Jugar .Capa{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Jugar .Capa a
+  {
+    font-size: 2rem;
+    color: #000;
+    background-color: #d8c479;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  /************************************************************************************/
+  /************************************************************************************/
+
+  /* Footer */
+  .footer {
+    width: 100vw;
+    background-color: #121212;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer-links,
+  .footer-bottom-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links a,
+  .footer-bottom-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover,
+  .footer-bottom-links a:hover {
+    color: #c5a66f;
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-social a {
+    background: #1f1f1f;
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+  }
+  
+  .footer-social a:hover {
+    background: #c5a66f;
+    color: #000;
+  }
+  
+  .footer-logo img {
+    max-width: 120px;
+    margin: 1rem auto;
+  }
+  
+  .footer-logo p {
+    font-size: 0.75rem;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+    color: #aaa;
+  }
