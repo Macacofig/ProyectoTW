@@ -353,8 +353,8 @@
     border: 1px solid #555;
 }
 
-.imagen-destacada img {
-
+.imagen-destacada video {
+    object-fit: cover;
     border: 2px solid #fff; 
     border-radius: 50%;
     border: 1px solid #555;
