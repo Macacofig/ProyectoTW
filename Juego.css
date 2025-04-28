@@ -893,7 +893,7 @@
 @media (max-width: 1000px) {
   
   .Campeones {
-    flex-direction: row;
+    flex-direction: column;
     height: auto;
   }
 
@@ -903,10 +903,16 @@
     padding: 2rem 0;
   }
 
+  .Campeones .Champ {
+    width: auto;
+  }
   .Campeones .Champ .ImagenChamp img{
     width: auto;
     height: auto;
     max-width: 100%;
+  }
+  .Campeones .Champ .TextoChamp{
+    margin-bottom: 2%;
   }
 }
 
